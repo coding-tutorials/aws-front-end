@@ -1,0 +1,10 @@
+language: node_js
+branches:
+  only:
+  - master
+before_install: skip
+install: skip
+before_script: skip
+script: ./publish.sh
+deploy: skip
+after_deploy: skip
