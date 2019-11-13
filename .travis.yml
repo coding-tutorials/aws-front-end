@@ -9,5 +9,5 @@ install:
 script:
   - npm test
 after_success:
-  - if [["$TRAVIS_BRANCH" = "qa"] && ["$TRAVIS_PULL_REQUEST" != "false" ]]; then ./publish.qa.sh; fi
-  - if [["$TRAVIS_BRANCH" = "production"] && ["$TRAVIS_PULL_REQUEST" != "false" ]]; then ./publish.production.sh; fi
+  - if [[$TRAVIS_BRANCH = "qa"] && [$TRAVIS_PULL_REQUEST == "false" ]]; then ./publish.qa.sh; fi
+  - if [[$TRAVIS_BRANCH = "production"] && [$TRAVIS_PULL_REQUEST == "false" ]]; then ./publish.production.sh; fi
