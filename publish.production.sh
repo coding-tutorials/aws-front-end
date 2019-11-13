@@ -2,7 +2,7 @@
 #build application
 npm run build
 #install aws
-pip install awscli
+pip install --user awscli
 #clean previous files
 aws s3 rm $AWS_BUCKET_PRODUCTION_ADDRESS --recursive
 #upload new files
