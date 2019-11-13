@@ -1,8 +1,9 @@
 language: node_js
 node_js: "10"
 env:
-  - AWS_BUCKET_QA_ADDRESS=s3://bucket-front-end-qa
-  - AWS_BUCKET_PRODUCTION_ADDRESS=s3://bucket-front-end-production
+  global:
+    - AWS_BUCKET_QA_ADDRESS=s3://bucket-front-end-qa
+    - AWS_BUCKET_PRODUCTION_ADDRESS=s3://bucket-front-end-production
 install:
   - npm install
 script:
